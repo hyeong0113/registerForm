@@ -1,0 +1,63 @@
+entity RegisterMember {
+    previousRegister String required,
+    korName String required,
+    engName String required,
+    birthday LocalDate required,
+    gender String required,
+    firstStreet String required,
+    secondStreet String,
+    city String required,
+    province String required,
+    postalCode String required,
+    cellPhone String required,
+    residentialPhone String,
+    emailAddress String required,
+    profession String,
+    companyName String,
+    firstLicenseplate String,
+    secondLicenseplate String,
+    residenceStatus String required,
+    dutyStatus String,
+    prevChurch String,
+    instructor String
+}
+
+entity Baptism {
+    baptismType String,
+    baptismYear String,
+    baptismChurch String
+}
+
+entity FamilyMember {
+    relationStatus String required,
+    previousRegister String required,
+    korName String required,
+    engName String required,
+    birthday LocalDate required,
+    gender String required,  
+    profession String,
+    companyName String,    
+    cellPhone String required,
+    emailAddress String required,
+    churchServed String,
+    yearServed String,
+    dutyStatus String,
+    prevChurch String
+}
+
+entity Volunteer {
+	volunteerType String
+}
+
+relationship OneToMany {
+	RegisterMember{familyMember} to FamilyMember{registerMember(korName)}
+    RegisterMember{baptism} to Baptism{registerMember(korName)}
+}
+
+relationship ManyToMany {
+	RegisterMember{volunteer(volunteerType)} to Volunteer{registerMember}
+    FamilyMember{volunteer(volunteerType)} to Volunteer{familyMember}
+}
+
+paginate RegisterMember, FamilyMember with infinite-scroll
+
