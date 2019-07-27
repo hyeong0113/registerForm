@@ -1,0 +1,24 @@
+{
+  "registerFormApp": {
+    "volunteer": {
+      "home": {
+        "title": "Volunteers",
+        "createLabel": "Create a new Volunteer",
+        "createOrEditLabel": "Create or edit a Volunteer",
+        "notFound": "No Volunteer found"
+      },
+      "created": "A new Volunteer is created with identifier {{ param }}",
+      "updated": "A Volunteer is updated with identifier {{ param }}",
+      "deleted": "A Volunteer is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Volunteer {{ id }}?"
+      },
+      "detail": {
+        "title": "Volunteer"
+      },
+      "volunteerType": "Volunteer Type",
+      "registerMember": "Register Member",
+      "familyMember": "Family Member"
+    }
+  }
+}

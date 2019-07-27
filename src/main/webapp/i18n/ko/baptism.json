@@ -1,0 +1,25 @@
+{
+  "registerFormApp": {
+    "baptism": {
+      "home": {
+        "title": "Baptisms",
+        "createLabel": "Create a new Baptism",
+        "createOrEditLabel": "Create or edit a Baptism",
+        "notFound": "No Baptism found"
+      },
+      "created": "A new Baptism is created with identifier {{ param }}",
+      "updated": "A Baptism is updated with identifier {{ param }}",
+      "deleted": "A Baptism is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Baptism {{ id }}?"
+      },
+      "detail": {
+        "title": "Baptism"
+      },
+      "baptismType": "Baptism Type",
+      "baptismYear": "Baptism Year",
+      "baptismChurch": "Baptism Church",
+      "registerMember": "Register Member"
+    }
+  }
+}

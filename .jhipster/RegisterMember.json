@@ -1,0 +1,156 @@
+{
+    "name": "RegisterMember",
+    "fields": [
+        {
+            "fieldName": "previousRegister",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "korName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "engName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "birthday",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "gender",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "firstStreet",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "secondStreet",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "city",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "province",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "postalCode",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "cellPhone",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "residentialPhone",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "emailAddress",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "profession",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "companyName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "firstLicenseplate",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "secondLicenseplate",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "residenceStatus",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "dutyStatus",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "prevChurch",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "instructor",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "familyMember",
+            "otherEntityRelationshipName": "registerMember",
+            "relationshipName": "familyMember"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "baptism",
+            "otherEntityRelationshipName": "registerMember",
+            "relationshipName": "baptism"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "volunteer",
+            "otherEntityRelationshipName": "registerMember",
+            "relationshipName": "volunteer",
+            "otherEntityField": "volunteerType",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20190726232243",
+    "entityTableName": "register_member",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

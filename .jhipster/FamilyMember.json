@@ -1,0 +1,111 @@
+{
+    "name": "FamilyMember",
+    "fields": [
+        {
+            "fieldName": "relationStatus",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "previousRegister",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "korName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "engName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "birthday",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "gender",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "profession",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "companyName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cellPhone",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "emailAddress",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "churchServed",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "yearServed",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dutyStatus",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "prevChurch",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "volunteer",
+            "otherEntityRelationshipName": "familyMember",
+            "relationshipName": "volunteer",
+            "otherEntityField": "volunteerType",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "registerMember",
+            "otherEntityRelationshipName": "familyMember",
+            "relationshipName": "registerMember",
+            "otherEntityField": "korName"
+        }
+    ],
+    "changelogDate": "20190726232245",
+    "entityTableName": "family_member",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

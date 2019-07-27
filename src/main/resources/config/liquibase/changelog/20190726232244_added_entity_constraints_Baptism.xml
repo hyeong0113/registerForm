@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity Baptism.
+    -->
+    <changeSet id="20190726232244-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="register_member_id"
+                                 baseTableName="baptism"
+                                 constraintName="fk_baptism_register_member_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="register_member"/>
+
+    </changeSet>
+</databaseChangeLog>

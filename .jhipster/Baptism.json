@@ -1,0 +1,35 @@
+{
+    "name": "Baptism",
+    "fields": [
+        {
+            "fieldName": "baptismType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "baptismYear",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "baptismChurch",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "registerMember",
+            "otherEntityRelationshipName": "baptism",
+            "relationshipName": "registerMember",
+            "otherEntityField": "korName"
+        }
+    ],
+    "changelogDate": "20190726232244",
+    "entityTableName": "baptism",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
